@@ -1,5 +1,6 @@
 <script>
   import svelteLogo from './assets/svelte.svg'
+
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
 
@@ -14,6 +15,7 @@
 
   let currentSlide = 0;
   let answers = {}; // To store user's answers
+  let selectedAnswerRecap = {}; // To store user's answers
   let email = null;
 
   function nextSlide() {
@@ -41,8 +43,6 @@
   }
 </script>
 
-<div class="flex items-center justify-center bg-gray-100">
-    <div class="relative w-[1000px] h-[800px] bg-white flex items-center justify-center">
         {#if currentSlide === 0}
             <Intro on:next={nextSlide} />
         {/if}
@@ -61,8 +61,6 @@
         {#if currentSlide === 5}
             <Results answers={answers} email={email} on:restart={resetQuiz} />
         {/if}
-    </div>
-</div>
 
 
 <style>
