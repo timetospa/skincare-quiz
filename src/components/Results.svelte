@@ -9,11 +9,13 @@
 
     async function loadProductData() {
 
-        const response = await fetch('/data/products.json');
+        //const response = await fetch('/data/products.json');
+        const response = await fetch('https://adetds.github.io/quiz-test/data/products.json');
         const product_data = await response.json();
         console.log(product_data);
 
-        const answersResponse = await fetch('/data/answers.json');
+        //const answersResponse = await fetch('/data/answers.json');
+        const answersResponse = await fetch('https://adetds.github.io/quiz-test/data/answers.json');
         const answer_map = await answersResponse.json();
         console.log(answer_map);
 
