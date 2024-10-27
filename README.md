@@ -1,6 +1,8 @@
 # Svelte + Vite
 
 https://adetds.github.io/quiz-test
+npm run build
+npm run deploy
 
 This template should help get you started developing with Svelte in Vite.
 
