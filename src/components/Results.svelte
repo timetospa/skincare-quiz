@@ -1,10 +1,11 @@
 <script>
     import { onMount } from 'svelte';
     import { createEventDispatcher } from 'svelte';
+    import bannerImage from '../assets/replen-banner.jpg';
     const dispatch = createEventDispatcher();
 
     export let answers;
-    export let email;
+    export let userEmail;
     let productRecommendations = [];
 
     async function loadProductData() {
@@ -34,24 +35,37 @@
         loadProductData();
     });
 
+    function addToCart(product) {
+        console.log(product);
+    }
+
     function restart() {
         dispatch('restart');
     }
 </script>
 
+<!--<div class="w-full h-64 bg-cover bg-center" style="background-image: url({bannerImage});">-->
+<!--    <div class="flex items-center justify-center h-full bg-black bg-opacity-10">-->
+<!--    </div>-->
+<!--</div>-->
+
 <div class="text-center">
-    <h2 class="text-2xl font-bold mb-4">Your Results</h2>
+
+    <h1 class="text-6xl font-grotesque">Your Recommendations</h1>
     <p class="mb-6">Based on your answers, here are some product recommendations:</p>
     <div class="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {#each productRecommendations as product}
-                <div class="bg-blue-100 p-4 rounded shadow">
+                <div class="p-4 rounded shadow">
+                    <img class="object-cover" src="{product.image_link}"/><br/>
                     {product.name}<br/>
-                    <img class="" src="{product.image_link}"/><br/>
                     {product.price}<br/>
+                    <button on:click={() => addToCart(product)} class="bg-tts-gold text-white px-6 py-2 rounded mt-6">
+                        Add To Cart
+                    </button>
                 </div>
         {/each}
     </div>
-    <button on:click={restart} class="bg-blue-500 text-white px-6 py-2 rounded mt-6">
+    <button on:click={restart} class="bg-tts-gold text-white px-6 py-2 rounded mt-6">
         Restart Quiz
     </button>
 </div>
