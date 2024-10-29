@@ -20,7 +20,7 @@
   let klaviyoInit = false;
 
   async function loadAnswerRecapMap() {
-      const responsea = await fetch('/quiz-test/data/selected-answers-map.json');
+      const responsea = await fetch('/skincare-quiz/data/selected-answers-map.json');
       const answer_recap_map = await responsea.json();
       return answer_recap_map;
   }

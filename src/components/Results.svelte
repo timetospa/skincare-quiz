@@ -10,11 +10,11 @@
 
     async function loadProductData() {
 
-        const response = await fetch('/quiz-test/data/products.json');
+        const response = await fetch('/skincare-quiz/data/products.json');
         const product_data = await response.json();
         console.log(product_data);
 
-        const answersResponse = await fetch('/quiz-test/data/answers.json');
+        const answersResponse = await fetch('/skincare-quiz/data/answers.json');
         const answer_map = await answersResponse.json();
         console.log(answer_map);
 
