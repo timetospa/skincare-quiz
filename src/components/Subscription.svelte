@@ -1,11 +1,19 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
-    import { onMount } from 'svelte';
+    import {createEventDispatcher} from 'svelte';
+    import {onMount} from 'svelte';
+
     const dispatch = createEventDispatcher();
 
     let userEmail = '';
+    let isEmailValid = true; // Track email validity
+    let isSubscribed = false; // Track subscription state
+    let buttonText = 'Subscribe'; // Initial button text
+
     export let selectedAnswerRecap;
     export let klaviyoInit;
+
+    // Reactive statement to validate the email format
+    $: isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail);
 
     async function showResults() {
         await subscribe(userEmail);
@@ -13,63 +21,31 @@
         dispatch('showResults');
     }
 
-    async function subscribe(userEmail) {
-        // try {
-        //     const response = await fetch('https://a.klaviyo.com/api/v1/list/TE8H8H/members/', {
-        //         method: 'POST',
-        //         headers: {
-        //             'Authorization': 'Klaviyo-API-Key QHnadM',
-        //             'Content-Type': 'application/json'
-        //         },
-        //         body: JSON.stringify({
-        //             email: userEmail,
-        //         })
-        //     });
-        //
-        //     if (response.ok) {
-        //
-        //         responseMessage.textContent = 'Thank you for subscribing!';
-        //         responseMessage.className = 'text-green-600';
-        //         console.log('subscribed');
-        //     } else {
-        //         const errorData = await response.json();
-        //         responseMessage.textContent = errorData.detail || 'There was an error subscribing.';
-        //         console.log('subscribe error ');
-        //         console.log(errorData.detail);
-        //     }
-        // } catch (error) {
-        //     console.error('Error:', error);
-        //     console.log('subscribe Exception ');
-        // }
 
+    async function subscribe() {
+        console.log(userEmail);
+        // Send a message to the parent
+
+        if (!isEmailValid) {
+            return; // Prevent submission if the email is not valid
+        }
+
+        if (userEmail) {
+            window.parent.postMessage({
+                type: 'SUBSCRIBE',
+                data: {
+                    email: userEmail,
+                }
+            }, "*");
+        }
+        buttonText = 'Subscribed!'; // Change the text
+        isSubscribed = true; // Disable the button
 
     }
 
     function back() {
         dispatch('back');
     }
-    onMount(() => {
-        // if (klaviyoInit) {
-        //     return;
-        // }
-        //
-        // const script = document.createElement('script');
-        // script.src = "https://static.klaviyo.com/onsite/js/QHnadM/klaviyo.js";
-        // script.async = true; // Load the script asynchronously
-        // script.onload = () => {
-        //     // Log to verify the script has loaded
-        //
-        //     klaviyoInit = true;
-        //     console.log('Klaviyo script loaded - ' + klaviyoInit);
-        //     if (window.Klaviyo) {
-        //         window.Klaviyo.init();
-        //     }
-        //     // Optional: Trigger any necessary initialization for the form
-        // };
-        //
-        // document.body.appendChild(script);
-
-    });
 </script>
 
 <div class="h-screen w-screen grid grid-cols-1 md:grid-cols-3">
@@ -82,17 +58,28 @@
             </div>
             <div class="w-full ">
 
-<!--                <div class="klaviyo-form-XKmggp"></div>-->
-
                 <label class="block mb-2">
-                    <input type="email" bind:value={userEmail} placeholder="You@example.com"/>
+                    <input type="email" bind:value={userEmail} placeholder="You@example.com" disabled={isSubscribed}/>
                 </label>
+
+                {#if userEmail !== '' && !isEmailValid}
+                    <p class="text-red-500">Please enter a valid email address.</p>
+                {/if}
+
+                <button on:click={subscribe} userEmail={userEmail}
+                        class="bg-tts-purple font-grotesque uppercase text-white px-6 py-2 rounded"
+                        disabled={isSubscribed}>
+                    {buttonText}
+                </button>
+
                 <p class="italic"> Or skip for now</p>
 
-                <button on:click={showResults} class="bg-tts-purple font-grotesque uppercase text-white px-6 py-2 rounded">
+                <button on:click={showResults}
+                        class="bg-tts-purple font-grotesque uppercase text-white px-6 py-2 rounded">
                     Show Results
                 </button>
-                <button on:click={back} class="bg-tts-gold font-grotesque uppercase text-white px-6 py-2 rounded">Back</button>
+                <button on:click={back} class="bg-tts-gold font-grotesque uppercase text-white px-6 py-2 rounded">Back
+                </button>
             </div>
         </div>
     </div>

@@ -24,13 +24,17 @@ This template should help get you started developing with Svelte in Vite.
 - Answers.json  - build from CSV / Google drive sheets
 
 
-- Styling / Design
-- Entry Logger - Send to Store?
+- Styling / Design (Matt/Linds)
+  - Loading animation before final results revealed
+  - Animate slides & slow down
 - iframe styling (Matt)
-- GTM Tracking (event?)
-- Klaviyo Subscriber
+- Fx
+  - Add listeners for iframe messages
+  - Send iframe messages from quiz
+  - Usage Tracking
+    - Save to ? JS log endpoint -> CSV out - POST Json answers and result
+    - Track clicks?
 
 
-- Loading animation before final results revealed
-- Animate slides
+
 - 

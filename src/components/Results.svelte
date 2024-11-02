@@ -37,6 +37,13 @@
 
     function addToCart(product) {
         console.log(product);
+        // Send a message to the parent
+        window.parent.postMessage({
+            type: 'ADD_TO_CART',
+            data: {
+                skus: [product.sku],
+            }
+        }, "*");
     }
 
     function restart() {

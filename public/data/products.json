@@ -1,26 +1,31 @@
 {
   "1096896": {
     "name": "Test Name",
+    "sku": "1000079",
     "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-soothing-apricot-toner_1000079_01.jpg",
     "price": 12.00
   },
   "123456": {
     "name": "Test Name 2",
+    "sku": "1000079",
     "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-soothing-apricot-toner_1000079_01.jpg",
     "price": 12.00
   },
   "98123": {
     "name": "Test Name 3",
+    "sku": "1000079",
     "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-soothing-apricot-toner_1000079_01.jpg",
     "price": 12.00
   },
   "2319": {
     "name": "Test Name 4",
+    "sku": "1000079",
     "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-soothing-apricot-toner_1000079_01.jpg",
     "price": 12.00
   },
   "3123": {
     "name": "Test Name 5",
+    "sku": "1000079",
     "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-soothing-apricot-toner_1000079_01.jpg",
     "price": 12.00
   }

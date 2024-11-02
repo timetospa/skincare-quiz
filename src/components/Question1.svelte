@@ -17,6 +17,16 @@
     function back() {
         dispatch('back');
     }
+
+
+
+    // Listen for messages from the parent page
+    window.addEventListener("message", (event) => {
+        if (event.origin === "https://hostsite.com") { // verify origin
+            console.log("Message from parent page:", event.data);
+        }
+    });
+
 </script>
 
 <div class="h-screen w-screen grid grid-cols-1 md:grid-cols-3">
