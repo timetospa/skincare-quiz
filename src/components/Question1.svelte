@@ -1,8 +1,10 @@
 <script>
     import { createEventDispatcher } from 'svelte';
+    import {onMount} from 'svelte';
     const dispatch = createEventDispatcher();
 
     let selectedAnswer = '';
+    let showContent = false;
     export let selectedAnswerRecap;
 
     // Reactive statement to trigger `next` only after `selectedAnswer` updates
@@ -27,6 +29,11 @@
         }
     });
 
+    onMount(() => {
+        dispatch('track', {'event': 'quiz-started', data: {}});
+        showContent = true;
+    })
+
 </script>
 
 <div class="h-screen w-screen grid grid-cols-1 md:grid-cols-3">
@@ -37,7 +44,7 @@
                 <h1 class="text-6xl font-grotesque">Skincare Quiz</h1>
                 <h2 class="text-2xl font-bold mb-4">How does your skin usually feel?</h2>
             </div>
-            <div class="w-full mt-2 ">
+            <div class="w-full mt-2 {`transition-opacity duration-700 ${showContent ? 'opacity-100 animate-fadeIn' : 'opacity-0'}`}">
 
                 <input id="optionA" type="radio" class="hidden peer" bind:group={selectedAnswer} value="A"/>
                 <label for="optionA" class="flex items-center justify-center w-4/5 md:w-2/3 h-12 mb-5 border-2 border-gray-400 bg-white rounded-lg cursor-pointer peer-checked:border-tts-gold-900 peer-checked:bg-tts-gold peer-checked:text-white transition hover:bg-tts-gold hover:text-white">

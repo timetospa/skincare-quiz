@@ -1,32 +1,128 @@
 {
   "1096896": {
-    "name": "Test Name",
-    "sku": "1000079",
-    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-soothing-apricot-toner_1000079_01.jpg",
-    "price": 12.00
+    "name": "ELEMIS Pro-Collagen Cleansing Balm",
+    "sku": "1096896",
+    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-pro-collagen_cleansing_balm_1015658_06_1.png",
+    "price": 69.00,
+    "sale_price": 64.50,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
   },
-  "123456": {
-    "name": "Test Name 2",
-    "sku": "1000079",
-    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-soothing-apricot-toner_1000079_01.jpg",
-    "price": 12.00
+  "1097442": {
+    "name": "ELEMIS ULTRA SMART Pro-Collagen Enviro-Adapt Day Cream",
+    "sku": "1097442",
+    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-ultra-smart-pro-collagen-enviro-adapt-day-cream_1096051_01_1.png",
+    "price": 314.00,
+    "sale_price": 235.50,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
   },
-  "98123": {
-    "name": "Test Name 3",
-    "sku": "1000079",
-    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-soothing-apricot-toner_1000079_01.jpg",
-    "price": 12.00
+  "1097438": {
+    "name": "ELEMIS ULTRA SMART Pro-Collagen Night Genius",
+    "sku": "1097438",
+    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-pro-collagen-ultra-smart-night-genius.jpg",
+    "price": 320.00,
+    "sale_price": 240.00,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
   },
-  "2319": {
-    "name": "Test Name 4",
-    "sku": "1000079",
-    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-soothing-apricot-toner_1000079_01.jpg",
-    "price": 12.00
+  "1097414": {
+    "name": "ELEMIS Pro-Collagen Glow Boost Exfoliator",
+    "sku": "1097414",
+    "image_link": "https://www.timetospa.com/media/catalog/product/4/9/4968-elemis_usa-pc_glow_boosting_exfoliator-100ml-1500x1500.jpg",
+    "price": 79.00,
+    "sale_price": 59.25,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
   },
-  "3123": {
-    "name": "Test Name 5",
-    "sku": "1000079",
-    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-soothing-apricot-toner_1000079_01.jpg",
-    "price": 12.00
+  "1096892": {
+    "name": "ELEMIS Dynamic Resurfacing Super-C Serum",
+    "sku": "1096892",
+    "image_link": "https://www.timetospa.com/media/catalog/product/1/_/1_2.jpg",
+    "price": 139.00,
+    "sale_price": 104.25,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
+  },
+  "1097631": {
+    "name": "ELEMIS Dynamic Resurfacing Collection",
+    "sku": "1097631",
+    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis_dynamic_resurfacing_collection.jpg",
+    "price": 69.00,
+    "sale_price": 74.25,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
+  },
+  "1097416": {
+    "name": "ELEMIS Dynamic Resurfacing Facial Pads",
+    "sku": "1097416",
+    "image_link": "https://www.timetospa.com/media/catalog/product/1/_/1.jpg",
+    "price": 69.00,
+    "sale_price": 64.50,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
+  },
+  "1093969": {
+    "name": "ELEMIS Pro-Collagen Marine Cream SPF 30",
+    "sku": "1096896",
+    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-pro-collagen-marine-cream-spf-30_1093969_01.png",
+    "price": 144.00,
+    "sale_price": 98.50,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
+  },
+  "1096493": {
+    "name": "ELEMIS Pro-Collagen Night Cream",
+    "sku": "1096493",
+    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis_pro-collagen_night_cream_1.jpg",
+    "price": 169.00,
+    "sale_price": 126.75,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
+  },
+  "1097605": {
+    "name": "ELEMIS Pro-Collagen Eye Revive Mask",
+    "sku": "1097605",
+    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-pro-collagen-eye-revive-mask_1096052_01.png",
+    "price": 89.00,
+    "sale_price": 66.50,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
+  },
+  "1096890": {
+    "name": "ELEMIS INCORRECT SKU - 1096890",
+    "sku": "1096890",
+    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-pro-collagen_cleansing_balm_1015658_06_1.png",
+    "price": 69.00,
+    "sale_price": 64.50,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
+  },
+  "1095246": {
+    "name": "ELEMIS ULTRA SMART Pro-Collagen Aqua Infusion Mask",
+    "sku": "1095246",
+    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis_ultra_smart_pro-collagen_aqua_infusion_1095246.jpg",
+    "price": 199.00,
+    "sale_price": 149.25,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
+  },
+  "1097268": {
+    "name": "ELEMIS ULTRA SMART Pro-Collagen Complex 12 Serum",
+    "sku": "1097268",
+    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-ultra-smart-pro-collagen-complex-12-serum_1095194_01.jpg",
+    "price": 364.00,
+    "sale_price": 273.50,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
+  },
+  "1096208": {
+    "name": "ELEMIS Incorrect SKU - 1096208",
+    "sku": "1096896",
+    "image_link": "https://www.timetospa.com/media/catalog/product/e/l/elemis-pro-collagen_cleansing_balm_1015658_06_1.png",
+    "price": 69.00,
+    "sale_price": 64.50,
+    "sale_price_start": "2024-10-22T00:00+0100",
+    "sale_price_end": "2024-11-04T00:00+0100"
   }
 }

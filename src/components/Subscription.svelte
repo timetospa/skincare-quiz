@@ -5,6 +5,7 @@
     const dispatch = createEventDispatcher();
 
     let userEmail = '';
+    let showContent = false;
     let isEmailValid = true; // Track email validity
     let isSubscribed = false; // Track subscription state
     let buttonText = 'Subscribe'; // Initial button text
@@ -23,8 +24,7 @@
 
 
     async function subscribe() {
-        console.log(userEmail);
-        // Send a message to the parent
+
 
         if (!isEmailValid) {
             return; // Prevent submission if the email is not valid
@@ -37,15 +37,24 @@
                     email: userEmail,
                 }
             }, "*");
+
+            dispatch('track', {'event': 'quiz-user-subscribe', data: {}});
+
+            buttonText = 'Subscribed!'; // Change the text
+            isSubscribed = true; // Disable the button
         }
-        buttonText = 'Subscribed!'; // Change the text
-        isSubscribed = true; // Disable the button
 
     }
 
     function back() {
         dispatch('back');
     }
+
+    onMount(() => {
+        showContent = true;
+    })
+
+
 </script>
 
 <div class="h-screen w-screen grid grid-cols-1 md:grid-cols-3">
@@ -56,7 +65,7 @@
                 <h1 class="text-6xl font-grotesque">Keep In Touch</h1>
                 <h2 class="text-2xl font-bold mb-4">Sign up to our newsletter</h2>
             </div>
-            <div class="w-full ">
+            <div class="w-full {`transition-opacity duration-700 ${showContent ? 'opacity-100 animate-fadeIn' : 'opacity-0'}`}">
 
                 <label class="block mb-2">
                     <input type="email" bind:value={userEmail} placeholder="You@example.com" disabled={isSubscribed}/>

@@ -3,7 +3,8 @@
     const dispatch = createEventDispatcher();
 
     let selectedAnswer = '';
-    let showRequiredMessage = false; // Flag to show required message
+    let showRequiredMessage = false;
+    let showContent = false;
     export let selectedAnswerRecap;
 
     // Reactive statement to trigger `next` only after `selectedAnswer` updates
@@ -20,6 +21,10 @@
     function back() {
         dispatch('back');
     }
+
+    onMount(() => {
+        showContent = true;
+    })
 </script>
 
 
@@ -32,7 +37,7 @@
                 <h2 class="text-2xl font-bold mb-4">What is your main skin focus right now?</h2>
             </div>
 
-            <div class="w-full mt-2">
+            <div class="w-full mt-2 {`transition-opacity duration-700 ${showContent ? 'opacity-100 animate-fadeIn' : 'opacity-0'}`}" >
                 <input id="optionA" type="radio" class="hidden peer" bind:group={selectedAnswer} value="A"/>
                 <label for="optionA" class="flex items-center justify-center text-sm xd:text-base px-2 py-2 w-4/5 md:w-2/3 h-12 mb-5 border-2 border-gray-400 bg-white rounded-lg cursor-pointer peer-checked:border-tts-gold-900 peer-checked:bg-tts-gold peer-checked:text-white transition hover:bg-tts-gold hover:text-white">
                     Softening lines and wrinkles (Aging / Fine lines)
