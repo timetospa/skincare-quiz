@@ -12,7 +12,7 @@
 
     async function loadProductData() {
 
-        const response = await fetch('/skincare-quiz/data/products.json');
+        const response = await fetch('https://qportal.thedevelopmentsuite.com/json/feed-1.json');
         const product_data = await response.json();
         //console.log(product_data);
 
@@ -49,6 +49,22 @@
         //dispatch('track', {'event': 'quiz-added-to-cart', data: {sku: product.sku, name: product.name}});
     }
 
+    function isOnSale(product) {
+
+        if (!product.sale_price || !product.sale_price_start) {
+            return false;
+        }
+
+        const currentDate = new Date();
+        const startDate = new Date(product.sale_price_start);
+
+        if (product.sale_price_end) {
+            const endDate = new Date(product.sale_price_end);
+            return currentDate >= startDate && currentDate <= endDate;
+        }
+
+        return false;
+    }
 
     function restart() {
         dispatch('restart');
@@ -73,7 +89,13 @@
                     <div class="p-4 rounded shadow">
                         <img class="object-cover" src="{product.image_link}"/><br/>
                         {product.name}<br/>
-                        {product.price}<br/>
+                        {#if isOnSale(product) }
+                            <span class="text-base line-through">{product.price}</span><br/>
+                            <span class="text-red-500">{product.sale_price}</span><br/>
+                        {:else}
+                            {product.price}<br/>
+                        {/if}
+
                         <button on:click={() => addToCart(product)} class="bg-tts-gold text-white px-6 py-2 rounded mt-6">
                             Add To Cart
                         </button>

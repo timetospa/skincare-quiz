@@ -24,6 +24,7 @@ This template should help get you started developing with Svelte in Vite.
 - Answers.json  - build from CSV / Google drive sheets
 
 
+- Sale prices
 - Styling / Design (Matt/Linds)
   - Loading animation before final results revealed
   - Animate slides & slow down
